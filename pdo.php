@@ -8,14 +8,74 @@ try {
 }
 
 //--veritabanına veri eklme
-$insert = $db->prepare('INSERT INTO users (name, email) VALUES (?, ?)');
-$insert->execute(array('veri1','veri2'));
+$query = $db->prepare('sql sorgusu');
+$query->execute(array('veriler'));
+
+if($query->rowCount() > 0)
+{
+     //--sorgunun sonucu olumlu ise
+}
+else
+{
+     //--sorgunun sonucu olumsuz ise
+}
 
 //--veritabanındaki veriyi güncelleme
+$query = $db->prepare('sql sorgusu');
+$query->execute(array('veriler'));
+
+if($query->rowCount() > 0)
+{
+     //--sorgunun sonucu olumlu ise
+}
+else
+{
+     //--sorgunun sonucu olumsuz ise
+}
 
 //--veritabanındaki veriyi silme
+$query = $db->prepare('sql sorgusu');
+$query->execute(array('veriler'));
 
-//--veritabanındaki verileri ekrana basma
+if($query->rowCount() > 0)
+{
+     //--sorgunun sonucu olumlu ise
+}
+else
+{
+     //--sorgunun sonucu olumsuz ise
+}
+
+//--veritabanındaki verileri ekrana yazma (tekli)
+$query = $db->prepare('sql sorgusu');
+$query->execute(array('veriler'));
+$blg = $query->fetch(PDO::FETCH_ASSOC);
+
+if($query->rowCount() > 0)
+{
+     //--sorgunun sonucu olumlu ise
+}
+else
+{
+     //--sorgunun sonucu olumsuz ise
+}
+
+//--veritabanındaki verileri ekrana yazma (çoklu)
+$query = $db->prepare('sql sorgusu');
+$query->execute(array('veriler'));
+
+if($query->rowCount() > 0)
+{
+     //--sorgunun sonucu olumlu ise
+     while($row = $query->fetch(PDO::FETCH_ASSOC))
+	{
+          echo $row['değeri istenen sütunun adı'];
+     }
+}
+else
+{
+     //--sorgunun sonucu olumsuz ise
+}
 
 //--veritabanı bağlantısını sonlandırma
 $db = null;
