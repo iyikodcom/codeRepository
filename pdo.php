@@ -59,6 +59,7 @@ $blg = $query->fetch(PDO::FETCH_ASSOC);
 if($query->rowCount() > 0)
 {
      //--sorgunun sonucu olumlu ise
+	echo $blg['değeri istenen sütunun adı'];
 }
 else
 {
@@ -75,8 +76,8 @@ if($query->rowCount() > 0)
      //--sorgunun sonucu olumlu ise
      while($row = $query->fetch(PDO::FETCH_ASSOC))
 	{
-          echo $row['değeri istenen sütunun adı'];
-     }
+		echo $row['değeri istenen sütunun adı'];
+     	}
 }
 else
 {
