@@ -1,5 +1,6 @@
 <?php
 
+********************************************************************************************************************
 //--veritabanı bağlantısı
 try {
      $db = new PDO("mysql:host=localhost;dbname=veritabaniAdi;charset=utf8", "kullaniciAdi", "sifre");
@@ -7,6 +8,7 @@ try {
      print $e->getMessage();
 }
 
+********************************************************************************************************************
 //--veritabanına veri eklme
 $query = $db->prepare('sql sorgusu');
 $query->execute(array('veriler'));
@@ -20,6 +22,7 @@ else
      //--sorgunun sonucu olumsuz ise
 }
 
+********************************************************************************************************************
 //--veritabanındaki veriyi güncelleme
 $query = $db->prepare('sql sorgusu');
 $query->execute(array('veriler'));
@@ -33,6 +36,7 @@ else
      //--sorgunun sonucu olumsuz ise
 }
 
+********************************************************************************************************************
 //--veritabanındaki veriyi silme
 $query = $db->prepare('sql sorgusu');
 $query->execute(array('veriler'));
@@ -46,6 +50,7 @@ else
      //--sorgunun sonucu olumsuz ise
 }
 
+********************************************************************************************************************
 //--veritabanındaki verileri ekrana yazma (tekli)
 $query = $db->prepare('sql sorgusu');
 $query->execute(array('veriler'));
@@ -60,6 +65,7 @@ else
      //--sorgunun sonucu olumsuz ise
 }
 
+********************************************************************************************************************
 //--veritabanındaki verileri ekrana yazma (çoklu)
 $query = $db->prepare('sql sorgusu');
 $query->execute(array('veriler'));
@@ -77,6 +83,7 @@ else
      //--sorgunun sonucu olumsuz ise
 }
 
+********************************************************************************************************************
 //--veritabanı bağlantısını sonlandırma
 $db = null;
 ?>
