@@ -1,5 +1,5 @@
 <?php
-	//-- +
+	//-- + veritabanındaki tablonun yapısı
 	id,name,parent
 	1,Yok,0
 	4,k1,1
@@ -8,7 +8,7 @@
 	
 	//-- +
 	$data['host'] = 'localhost';
-	$data['dbname'] = 'ecommerce';
+	$data['dbname'] = 'veritabanı adı';
 	$data['uName'] = 'root';
 	$data['uPass'] = '';
 	//-- -
@@ -29,7 +29,7 @@
 	
 	//-- +
 	
-	$query = $db->prepare('SELECT ecom_categories.id,ecom_categories.name,ecom_categories.parent FROM ecom_categories ORDER BY ecom_categories.name ASC');
+	$query = $db->prepare('sql sorgusu');
 	$query->execute();
 
 	$items = array();
