@@ -26,22 +26,28 @@
 		
 	}
 	//-- -
-	
-	//-- +
-	
-	$query = $db->prepare('sql sorgusu');
-	$query->execute();
 
-	$items = array();
-	if($query->rowCount() > 0)
+	//-- +
+	//--veritabanında tek bir tabloda yer alan categorileri bir diziye aktarır
+	function prj_buildItems($db)
 	{
-		while($row = $query->fetch(PDO::FETCH_ASSOC))
+		$query = $db->prepare('SELECT ecom_categories.id,ecom_categories.name,ecom_categories.parent FROM ecom_categories ORDER BY ecom_categories.name ASC');
+		$query->execute();
+		
+		$items = array();
+		
+		if($query->rowCount() > 0)
 		{
-			$items[] = $row;
+			while($row = $query->fetch(PDO::FETCH_ASSOC))
+			{
+				$items[] = $row;
+			}
 		}
+		
+		return $items;
 	}
-	
-	function buildTree($items,$root) {
+	//--bir önceki fonksiyon ile oluşturulan $items dizisini kategori ağacına çevirir
+	function prj_buildTree($items,$root) {
 
 		$childs = array();
 
@@ -65,42 +71,8 @@
 
 		return $childs[$root];
 	}
-
-	$tree = buildTree($items,1);
-	
-	echo '<pre>';
-	print_r($tree);
-	echo '</pre>';
-	//-- -
-	
-	//-- +
-	function abc($data,$depth = 0)
-	{
-		$list = array();
-		
-		foreach($data as $row1)
-		{
-			foreach($data as $row2)
-			{
-				if($row1['parent'] == $row2['id'])
-				{
-					$list[$row1['id']]['id'] = $row1['id'];
-					$list[$row1['id']]['name'] = $row1['name'];
-					$list[$row1['id']]['parent_name'] = $row2['name'];
-				}
-			}
-		}
-		
-		return $list;
-	}
-	
-	echo '<pre>';
-	print_r(abc($items));
-	echo '</pre>';
-	//-- -
-	
-	//-- +
-	function toSelect ($arr, $depth, $selected) 
+	//--oluşturulan kategori ağacını <select> tagında göstermek için
+	function toSelect($arr, $depth, $selected = array()) 
 	{    
 		$html = '';
 		
@@ -121,21 +93,98 @@
 
 			if ( array_key_exists('childs', $v) ) 
 			{
+				if($v['id'] == 1)
+				{
+					$html.= toSelect($v['childs'], $depth, $selected);
+				}
+				else
+				{
+					$html.= toSelect($v['childs'], $depth+1, $selected);
+				}
+			}
+		}
+
+		return $html;
+	}
+	//--oluşturulan kategori ağacını <table> tagında göstermek için
+	function toTable($arr, $depth, $selected = array()) 
+	{    
+		$html = '';
+		
+		foreach ( $arr as $v ) 
+		{
+			
+			if($v['id'] != 1)
+			{
+				$html.= '<tr>';
+				$html.= '<th scope="row" class="text-center align-middle">'.$v['id'].'</th>';
+				$html.= '<td class="align-middle">'.str_repeat('--', $depth);
+				$html.= $v['name'].'</td>';
+				$html.= '<td class="w-25">
+							<div class="btn-group w-100" role="group">
+								<a href="update.categories.php?i='.core_idEnCode($v['id']).'" class="btn btn-info">
+									<i class="fas fa-pen"></i>
+								</a>
+								<a href="exec.categories.php?i='.core_idEnCode($v['id']).'&e=delete" class="btn btn-danger">
+									<i class="fas fa-trash"></i>
+								</a>
+							</div>
+						</td>';
+				$html.= '</tr>'.PHP_EOL;
+			}
+			
+			if ( array_key_exists('childs', $v) ) 
+			{
 				
-				$html.= toSelect($v['childs'], $depth+1, $selected);
+				if($v['id'] == 1)
+				{
+					$html.= toTable($v['childs'], $depth, $selected);
+				}
+				else
+				{
+					$html.= toTable($v['childs'], $depth+1, $selected);
+				}
 				
 			}
 		}
 
 		return $html;
 	}
-
-	echo '<select multiple>';
-	echo toSelect($tree,0,array(4,12));
-	echo '</select>';
+	//--seçilen bir kategorinin tüm derinliklerdeki alt kategorilerini getirir
+	function allChildCat($src_arr, $currentid, $parentfound = false, $cats = array())
+	{
+		foreach($src_arr as $row)
+		{
+			if((!$parentfound && $row['id'] == $currentid) || $row['parent'] == $currentid)
+			{
+				$rowdata = array();
+				foreach($row as $k => $v)
+				{
+					$rowdata[$k] = $v;
+				}
+					
+				$cats[] = $rowdata;
+				
+				if($row['parent'] == $currentid)
+				{
+					$cats = array_merge($cats, allChildCat($src_arr, $row['id'], true));
+				}
+			}
+		}
+		return $cats;
+	}
+	//--bir önceki fonksiyonda gelen tüm alt kategorilerin id'lerini içeren bir dizi üretir
+	function allChildCatId($array)
+	{
+		foreach($array as $row)
+		{
+			$list[] = $row['id'];
+		}
+		
+		return $list;
+	}
 	//-- -
-	
-	
+
 	//-- +
 	$db = null;
 	//-- -
