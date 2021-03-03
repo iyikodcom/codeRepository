@@ -1,0 +1,59 @@
+pwd - git dahs'in hangi konumda olduğunu görmek için
+cd Desktop/ - desktop'a gider
+cd *dosya ismi* - bir dosyaya erişmek için kullanılır
+git config --list - git ayarlar dosyası
+git init - local repo kurulumu için, boş repo kuruyor
+git status - git ile dosyaların statüsü hakkında bilgi alırız
+git status -s - yapılan işlemlerin özetini gösterir
+git add . - dosyaları committen bir önceki alana alır
+git commit -m - commit işlemi ve açıklama ekleme
+code . - dosya projesini visual studio code programında açar
+touch *dosya ismi* - çalışılan dosya içersine yeni bir dosya oluşturuyoruz
+rm *dosya ismi* - çalışılan dosya içerindeki o isimdeki dosyayı siler
+git add -A - tüm değişiklikleri staged gönderiyor
+ls -al - çalışan klasör içerindeki dosyaları listeler
+mv *dosyanın eski ismi* *dosyanın yeni ismi* - dosyanın ismini değiştirir
+git restore --staged *dosya ismi* - dosyayı staged area'dan çalışma alanına getirdi
+git restore *dosya ismi* - dosyadaki değişiklikleri iptal edip eski haline getirdi
+git show - en son yapılan işlemi gösterir
+git log - en baştan şu ana kadar ki yapılan işlemleri gösterir detaylı
+git log --oneline - en baştan şu ana kadar ki yapılan işlemleri özet
+git log -p -2 - son yapılan 2 değişikliği gösterir
+git log --since=30minutes - 30 dakika önce yapılan değişikleri gösterir
+git checkout *commit 7 haneli id'si* - geriye doğru zaman yolculuğu aradaki commitleri yok sayar
+git checkout master - projenin en son haline dönüş
+git revert *commit 7 haneli id'si* - sadece belirtileni bir commitlik geri alır
+git reset --soft *commit 7 haneli id'si* - sadece commit alanında reset işlemi yapar
+git reset --mixed *commit 7 haneli id'si* - staged alanında reset işlemi yapar
+git reset --hard *commit 7 haneli id'si* - herşeyi en başa döndürür
+git rm -r --cached . - cache siler
+git branch *ismi* - projedeki dosyalar üzerinde farklı geliştirmeler yapılacağı zaman kullanılır
+git branch -a - branchları listemek için
+git branch -d *branch ismi* - branch silinir, branch silme biraz tehlikeli
+git checkout *branch ismi* - branche erişim sağlamış oluruz
+git merge *branch isim1* *branch isim2* - brachları master ile birleştiriyoruz
+mkdir *dosya ismi* - yeni bir dosya oluşturmak için
+ssh-keygen -t rsa -b 4096 -C"email adresi" - ssh keygen oluşturur.".ssh" dosyasının içersinde, id_rsa.pub
+git push - en basit yöntemle dosyaları githubla sekron eder local -> remote
+git clone *ssh adresi* - git özellikleri ile birlikte projeyi bilgisayarımıza indiririz
+git commit -am *açıklama* - hem staged hemde commit işlemleri tek kodda yapılıyor
+git fetch - 
+git pull (= git fetch + git merge) - en basit yöntemle dosyaları githubla sekron eder remote -> local
+git merge'de editör açıldığında kapatmak için 'i' tuşana sonra 'esc' tuşuna en alt kısma ':wq' yazıyoruz editörü kapatıyoruz
+rm -rf .git - sadece çalışma alanı kalacak şekilde tüm repoyu init dahil temizler (çok tehlikeli, projenin yedeğini alınız)
+
+
+vim editöründen çıkmak için 'ESC' tuşuna bir kez basıyoruz, alt kısımdaki alana ':x!' yazıyoruz, bu şekilde editördeki yapılan değişiklikler kaydetip çıkıyoruz
+git log' dan çıkmak için 'q' kullanabilirsiniz
+.gitignore proje ilk oluşturulurken eklenmesi gereken bir dosya, sonradan eklendiğinde problem olabilir. O problemi aşmak için cache temizlenmesi gerekli
+.gitignore dosyası değişiklik kayıtlarının tutulmamasını istediğimiz dosyaları belirtmek için kullanılır
+
+
+sıfırdan local bir proje ile github'ı birleştirmek için gerekli olan kodlar
+echo "# vuejs" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin <git ssh url>
+git push -u origin main
