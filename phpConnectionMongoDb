@@ -21,3 +21,5 @@ sayfasının alt kısmından bizim sistemimize uygun olan versiyonunu indiriyoru
 sonrasında c:/xampp/php/php.ini dosyasını açarak içersine ilgili
 bölüme /* extension=mongodb */ ekliyoruz, 
 xampp tekrar baştan başlatıyoruz mongodb uzantısı 2 aşamada da kurulmuş oluyor.
+
+https://doc.bccnsoft.com/docs/php-docs-7-en/mongodb.tutorial.library.html
