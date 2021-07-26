@@ -1,0 +1,5 @@
+php mongodb veritabanı bağlantısı 2 aşamadan oluşmaktadır. Bunlar;
+1.Mongodb kütüphanesinin kurulması, bunun için bilgisayara https://getcomposer.org/download/ adresinden composerı kuruyoruz, composer'ı kurduktan sonra /* composer --version */ 
+kodu ile varlığını kontrol ediyoruz. Mongodb kütüphanesinin kurulmasını istediğimiz klasörün konumuna komut istmeciden geliyoruz ve /* composer require "mongodb/mongodb=^1.0.0" */
+kodunu yazıyoruz istediğimiz klasöre kütüphanein kurulumunu gerçekleştiriyoruz.
+2.
