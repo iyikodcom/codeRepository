@@ -11,6 +11,7 @@ ekliyoruz ve açılan bilgilerden PHP version, Thread safety ve
 Loaded Configuration File bölümlerini kontrol ediyoruz.
 https://windows.php.net/ adresine girip php için gerekli olan mongodb uzantı dosyasını indireceğiz,
 
+//--sitedeki link yolu
 http://pecl.php.net/ >> http://pecl.php.net/packages.php >> http://pecl.php.net/packages.php?catpid=7&catname=Database 
 >> http://pecl.php.net/package-stats.php?cid=7 >> http://pecl.php.net/package/mongodb >> http://pecl.php.net/package/mongodb/1.10.0/windows 
 
