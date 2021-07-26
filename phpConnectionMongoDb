@@ -1,5 +1,17 @@
 php mongodb veritabanı bağlantısı 2 aşamadan oluşmaktadır. Bunlar;
+
 1.Mongodb kütüphanesinin kurulması, bunun için bilgisayara https://getcomposer.org/download/ adresinden composerı kuruyoruz, composer'ı kurduktan sonra /* composer --version */ 
 kodu ile varlığını kontrol ediyoruz. Mongodb kütüphanesinin kurulmasını istediğimiz klasörün konumuna komut istmeciden geliyoruz ve /* composer require "mongodb/mongodb=^1.0.0" */
 kodunu yazıyoruz istediğimiz klasöre kütüphanein kurulumunu gerçekleştiriyoruz.
-2.
+
+2.Mongodb uzantısının kurulumu için localhosta açtığımız bir klasöre index.php dosyası açıp içersine /* phpinfo() */ kodunu ekliyoruz ve açılan bilgilerden PHP version, Thread safety ve
+Loaded Configuration File bölümlerini kontrol ediyoruz.
+https://windows.php.net/ adresine girip php için gerekli olan mongodb uzantı dosyasını indireceğiz,
+
+http://pecl.php.net/ >> http://pecl.php.net/packages.php >> http://pecl.php.net/packages.php?catpid=7&catname=Database >> http://pecl.php.net/package-stats.php?cid=7 >>
+http://pecl.php.net/package/mongodb >> http://pecl.php.net/package/mongodb/1.10.0/windows 
+
+Thread Safety değeri disabled ise /* Non Theard Safe */ inidirilmelidir.
+
+sayfasının alt kısmından bizim sistemimize uygun olan versiyonunu indiriyoruz ve c:/xampp/php/ext içersine yüklüyoruz, sonrasında c:/xampp/php/php.ini dosyasını açarak içersine ilgili
+bölüme /* extension=mongodb */ ekliyoruz, xampp tekrar baştan başlatıyoruz mongodb uzantısı 2 aşamada da kurulmuş oluyor.
