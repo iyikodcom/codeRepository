@@ -1,4 +1,3 @@
-//--aaa
 //-- +
 //-- tarayıcı kapandığında yada tarayıcının bulunduğu sekmesi kapandığında -- çalışacak fonksiyon
 function triggerFunction()
