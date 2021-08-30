@@ -9,3 +9,4 @@ Projelerimde kullanmış olduğum herzaman ve heryerde gerekli olan kodlarım
 * [Pyton Ders Notları](https://github.com/iyikodcom/codeRepository/blob/master/pythonLectureNotes.txt)
 * [Php ile Mongodb bağlantısı](https://github.com/iyikodcom/codeRepository/blob/master/phpConnectionMongoDb)
 * [Php ile Mongodb kodları](https://github.com/iyikodcom/codeRepository/blob/master/phpWithMongodbCodes.txt)
+* [Tarayıcı kapandığında tetiklenen fonksiyon](https://github.com/iyikodcom/codeRepository/blob/master/browserClosing.js)
