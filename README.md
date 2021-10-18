@@ -12,3 +12,4 @@ Projelerimde kullanmış olduğum herzaman ve heryerde gerekli olan kodlarım
 * [Tarayıcı kapandığında tetiklenen fonksiyon](https://github.com/iyikodcom/codeRepository/blob/master/browserClosing.js)
 * [JQuery Ajax Örnek](https://github.com/iyikodcom/codeRepository/blob/master/jquery-ajax.js)
 * [Göreceli Yüksekliğe Scroll Ekleme](https://github.com/iyikodcom/codeRepository/blob/master/cssRelativeHeightScroll.html)
+* [Bootstrap İkonlarının 1370 tanesinin Class isimleri](https://github.com/iyikodcom/codeRepository/blob/master/bootstrap-icons-cheatsheet.php)
