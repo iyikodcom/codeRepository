@@ -85,6 +85,13 @@ else
 }
 
 ********************************************************************************************************************
+//--veritabanında insert işlemi gerçekleştikren sonraki en son id'yi alma
+$query = $db->prepare('sql sorgusu');
+$query->execute(array('veriler'));
+
+$lastInsertID = $db->lastInsertId();
+
+********************************************************************************************************************
 //--veritabanı bağlantısını sonlandırma
 $db = null;
 ?>
