@@ -14,3 +14,4 @@ Projelerimde kullanmış olduğum herzaman ve heryerde gerekli olan kodlarım
 * [Göreceli Yüksekliğe Scroll Ekleme](https://github.com/iyikodcom/codeRepository/blob/master/cssRelativeHeightScroll.html)
 * [Bootstrap İkonlarının 1370 tanesinin Class isimleri](https://github.com/iyikodcom/codeRepository/blob/master/bootstrap-icons-cheatsheet.php)
 * [Javascript'te setTimeout ve setInterval kullanım örnekleri](https://github.com/iyikodcom/codeRepository/blob/master/javascript_setTimeout_and_setInterval.js)
+* [Javascript ile selectbox'ta yapılan değişiklik sonrası formu gönderme](https://github.com/iyikodcom/codeRepository/blob/master/javascriptSelectChangeFormSubmit.html)
