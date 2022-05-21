@@ -33,6 +33,7 @@ git branch -d <branch ismi> - branch silinir, branch silme biraz tehlikeli
 git checkout <branch ismi> - branche erişim sağlamış oluruz
 git merge <branch isim#1> <branch isim#2> - brachları master ile birleştiriyoruz
 mkdir <dosya ismi> - yeni bir dosya oluşturmak için
+rmdir /s <dosya ismi> - dosyayı ve içersindekileri siler ve silmeden önce onay ister
 ssh-keygen -t rsa -b 4096 -C"email adresi" - ssh keygen oluşturur.".ssh" dosyasının içersinde, id_rsa.pub
 git push - en basit yöntemle dosyaları githubla sekron eder local -> remote
 git clone <ssh adresi> - git özellikleri ile birlikte projeyi bilgisayarımıza indiririz
@@ -57,10 +58,3 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin <git ssh url>
 git push -u origin main
-
-sıfırdan react proje oluşturup onu github'a nasıl yüklerizin adım adım yapılması
--github'da repo oluştur "proje-adi" adında yeni repo oluştur
--terminalden "npx create-react-app proje-adi" kodlu ile yeni bir reactjs projesi oluştur
--"git branch -M main" ana branch'ı main olarak değiştiriyoruz github için
--"git remote add origin https://github.com/iyikodcom/proje-adi.git" yükleme yapacağımız github'daki repo'yu seçiyoruz
--"git push -u origin main" yükleme işlemini gerçekleştiriyoruz
