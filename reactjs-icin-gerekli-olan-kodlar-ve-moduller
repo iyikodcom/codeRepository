@@ -1,0 +1,12 @@
+kurulum aşamasında react proje oluşturup onu github'a nasıl yüklerizin adım adım yapılması
+-github'da repo oluştur "proje-adi" adında yeni repo oluştur
+-terminalden "npx create-react-app proje-adi" kodlu ile yeni bir reactjs projesi oluştur
+-"git branch -M main" ana branch'ı main olarak değiştiriyoruz github için
+-"git remote add origin https://github.com/iyikodcom/proje-adi.git" yükleme yapacağımız github'daki repo'yu seçiyoruz
+-"git push -u origin main" yükleme işlemini gerçekleştiriyoruz
+
+modüller
+1-tailwindcss
+2-react-router-dom
+3-axios
+4-firebase
