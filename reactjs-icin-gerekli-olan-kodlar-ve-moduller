@@ -10,3 +10,10 @@ modüller
 2-react-router-dom
 3-axios
 4-firebase
+
+reactda axios ile xampp localhostdaki bir backend'e erişebilmek için (CROS)
+-Apache http.conf dosyasında aşağıdaki değişiklikleri yapmak gerekiyor
+  1."Listen 80" yazan satırı bulup aşağıdaki kodların sırasıyla eklenmesi gerekiyor
+  2.Header set Access-Control-Allow-Origin "*"
+  3.Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+  4.Header set Access-Control-Allow-Headers "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
