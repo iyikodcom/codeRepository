@@ -42,6 +42,7 @@ git fetch -
 git pull (= git fetch + git merge) - en basit yöntemle dosyaları githubla sekron eder remote -> local
 git merge'de editör açıldığında kapatmak için 'i' tuşana sonra 'esc' tuşuna en alt kısma ':wq' yazıyoruz editörü kapatıyoruz
 rm -rf .git - sadece çalışma alanı kalacak şekilde tüm repoyu init dahil temizler (çok tehlikeli, projenin yedeğini alınız)
+git diff --stat <sha1> <sha2> - commitler arasında satır sayısı olarak farkı verir
 
 
 vim editöründen çıkmak için 'ESC' tuşuna bir kez basıyoruz, alt kısımdaki alana ':x!' yazıyoruz, bu şekilde editördeki yapılan değişiklikler kaydetip çıkıyoruz
