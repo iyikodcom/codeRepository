@@ -2,3 +2,4 @@ composer global require laravel/installer - laravel'in global olarak pc'ye kurul
 laravel new firstProject - 'firstProject' adında yeni laravel projesi oluşturur
 php artisan serve - projenin bulunduğu konuma geldikten sonra projeyi çalıştırmaya yarar
 php artisan serve --port=9500 - projeye başka bir port'tan erişebilmek için port değişikliği yapıyoruz, proje klasörünü pc'deki xampp server'ına kopyalarakta projeyi localhostta çalıştırabiliyoruz.
+php artisan make:controller HomeController - 'HomeController' adında yeni bir controller oluşturuyoruz. HomeController yerine herhangi bir isimlendirme yapıyoruz.
