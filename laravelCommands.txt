@@ -1,1 +1,2 @@
--composer global require laravel/installer
+composer global require laravel/installer - laravel'in global olarak pc'ye kurulmasını sağlar
+laravel new firstProject - 'firstProject' adında yeni laravel projesi oluşturur
