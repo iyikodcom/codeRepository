@@ -3,3 +3,5 @@ laravel new firstProject - 'firstProject' adında yeni laravel projesi oluşturu
 php artisan serve - projenin bulunduğu konuma geldikten sonra projeyi çalıştırmaya yarar
 php artisan serve --port=9500 - projeye başka bir port'tan erişebilmek için port değişikliği yapıyoruz, proje klasörünü pc'deki xampp server'ına kopyalarakta projeyi localhostta çalıştırabiliyoruz.
 php artisan make:controller HomeController - 'HomeController' adında yeni bir controller oluşturuyoruz. HomeController yerine herhangi bir isimlendirme yapıyoruz.
+php artisan route:clear - rotalarda yapılan değişikliklerden sonra rota önbelleğini temizle işlemi yapılıyor
+php artisan optimize - projedeki tüm rotaları ve önbellekteki verileri temizler
