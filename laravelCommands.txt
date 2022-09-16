@@ -6,3 +6,11 @@ php artisan make:controller HomeController - 'HomeController' adında yeni bir c
 php artisan route:clear - rotalarda yapılan değişikliklerden sonra rota önbelleğini temizle işlemi yapılıyor
 php artisan optimize - projedeki tüm rotaları ve önbellekteki verileri temizler
 php artisan key:generate - uygulama anahtarı oluşturulur
+
+
+laravel framework'unu kullanarak git ile versiyonlanabilen yeni proje oluşturma adımları
+laravel new <proje-adi> - laravel ile yeni proje oluşturuyoruz
+pc de git yüklü olduğunu varsayıyoruz ve git bash'te projenin konumuna gidiyoruz ardından aşağıdaki komutları git bash yada terminal ekranında çalıştırıyoruz
+git init - proje için git yapılandırmasını yapıyoruz
+git add . - projeyi 'add' durumuna alıyoruz
+git commit -m "<açıklama>" - projeyi commitliyoruz
