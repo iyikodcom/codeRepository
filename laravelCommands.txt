@@ -5,3 +5,4 @@ php artisan serve --port=9500 - projeye başka bir port'tan erişebilmek için p
 php artisan make:controller HomeController - 'HomeController' adında yeni bir controller oluşturuyoruz. HomeController yerine herhangi bir isimlendirme yapıyoruz.
 php artisan route:clear - rotalarda yapılan değişikliklerden sonra rota önbelleğini temizle işlemi yapılıyor
 php artisan optimize - projedeki tüm rotaları ve önbellekteki verileri temizler
+php artisan key:generate - uygulama anahtarı oluşturulur
