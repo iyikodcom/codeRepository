@@ -7,7 +7,7 @@ php artisan route:clear - rotalarda yapılan değişikliklerden sonra rota önbe
 php artisan optimize - projedeki tüm rotaları ve önbellekteki verileri temizler
 php artisan key:generate - uygulama anahtarı oluşturulur
 php artisan migrate - yeni oluşturduğunuz ve daha önce migrate etmediğiniz tüm migrationları çalıştırmak için Migrate Artisan komutunu kullanırız.
-php artisan migrate:fresh - migrate dosyalarındaki veritabanı tablo şablonlarında yapılan değişikliklerin veritabanında uygulanmasını sağlar.
+php artisan migrate:fresh - migrate dosyalarındaki veritabanı tablo şablonlarında yapılan değişikliklerin veritabanında uygulanmasını sağlar. Bütün tablolalar silinip tekrardan oluşur.***
 php artisan make:migration create_orders_table - yeni migration dosyası oluşturur. 'create_<migration adı>_table'
 
 
