@@ -9,6 +9,8 @@ php artisan key:generate - uygulama anahtarı oluşturulur
 php artisan migrate - yeni oluşturduğunuz ve daha önce migrate etmediğiniz tüm migrationları çalıştırmak için Migrate Artisan komutunu kullanırız.
 php artisan migrate:fresh - migrate dosyalarındaki veritabanı tablo şablonlarında yapılan değişikliklerin veritabanında uygulanmasını sağlar. Bütün tablolalar silinip tekrardan oluşur.***
 php artisan make:migration create_orders_table - yeni migration dosyası oluşturur. 'create_<migration adı>_table'
+php artisan make:model Order - yeni model oluşturur. migrate'in adı 'orders' ise model'in adı 'Order' olmalıdır
+php artisan make:model Product -m - yeni model oluştururken ona bağlı olacak migrate'i aynı anda oluşturuyoruz
 
 
 laravel framework'unu kullanarak git ile versiyonlanabilen yeni proje oluşturma adımları
