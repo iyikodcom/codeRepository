@@ -27,6 +27,10 @@ php artisan make:model Product -m - yeni model oluştururken ona bağlı olacak 
 php artisan db:seed - seed dosyalarını çalıştırır
 php artisan make:seeder UserSeeder - yeni seed dosyası oluşturmaya yarar
 
+*** factory ***
+php artisan tinker - factory işlemlerini yapabilmek için gerekli olan paneli çalıştırır
+User::factory()->count(10)->create() - bu komutta daha önceden oluşturulmuş olan 'User' tablosuna factory'nin içersinde bulunan random veriler ile random satırlar eklemeye yarar.
+
 *** laravel framework'unu kullanarak git ile versiyonlanabilen yeni proje oluşturma adımları ***
 laravel new <proje-adi> - laravel ile yeni proje oluşturuyoruz
 git init - proje için git yapılandırmasını yapıyoruz
