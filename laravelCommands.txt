@@ -23,6 +23,10 @@ php artisan make:migration add_description_to_orders_table - migrate içersinde 
 php artisan make:model Order - yeni model oluşturur. migrate'in adı 'orders' ise model'in adı 'Order' olmalıdır
 php artisan make:model Product -m - yeni model oluştururken ona bağlı olacak migrate'i aynı anda oluşturuyoruz
 
+*** seeder ***
+php artisan db:seed - seed dosyalarını çalıştırır
+php artisan make:seeder UserSeeder - yeni seed dosyası oluşturmaya yarar
+
 *** laravel framework'unu kullanarak git ile versiyonlanabilen yeni proje oluşturma adımları ***
 laravel new <proje-adi> - laravel ile yeni proje oluşturuyoruz
 git init - proje için git yapılandırmasını yapıyoruz
