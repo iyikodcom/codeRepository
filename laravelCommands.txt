@@ -28,6 +28,7 @@ php artisan db:seed - seed dosyalarını çalıştırır
 php artisan make:seeder UserSeeder - yeni seed dosyası oluşturmaya yarar
 
 *** factory ***
+php artisan make:factory PostFactory - yeni factory'i üretir
 php artisan tinker - factory işlemlerini yapabilmek için gerekli olan paneli çalıştırır
 User::factory()->count(10)->create() - bu komutta daha önceden oluşturulmuş olan 'User' tablosuna factory'nin içersinde bulunan random veriler ile random satırlar eklemeye yarar.
 
