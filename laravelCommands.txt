@@ -1,7 +1,6 @@
 composer global require laravel/installer - laravel'in global olarak pc'ye kurulmasını sağlar
 laravel new firstProject - 'firstProject' adında yeni laravel projesi oluşturur
 php artisan list - artisan üzerinde kullanabileceğiniz tüm komutları listeler.
-
 php artisan serve - projenin bulunduğu konuma geldikten sonra projeyi çalıştırmaya yarar
 php artisan serve --port=9500 - projeye başka bir port'tan erişebilmek için port değişikliği yapıyoruz, proje klasörünü pc'deki xampp server'ına kopyalarakta projeyi localhostta çalıştırabiliyoruz.
 php artisan make:controller HomeController - 'HomeController' adında yeni bir controller oluşturuyoruz. HomeController yerine herhangi bir isimlendirme yapıyoruz.
@@ -13,6 +12,7 @@ php artisan migrate - yeni oluşturduğunuz ve daha önce migrate etmediğiniz t
 php artisan migrate:fresh - migrate dosyalarındaki veritabanı tablo şablonlarında yapılan değişikliklerin veritabanında uygulanmasını sağlar. Bütün tablolalar silinip tekrardan oluşur.***
 php artisan migrate:rollback - Veritabanında yaptığınız değişiklikleri adım adım geri alır.
 php artisan make:migration create_orders_table - yeni migration dosyası oluşturur. 'create_<migration adı>_table'
+php artisan make:migration add_description_to_orders_table - migrate içersinde oluşturulacak yada daha öncesinde oluşturulmuş verilerini silmeden tabloya yeni sütunlar eklemeye yarar.
 php artisan make:model Order - yeni model oluşturur. migrate'in adı 'orders' ise model'in adı 'Order' olmalıdır
 php artisan make:model Product -m - yeni model oluştururken ona bağlı olacak migrate'i aynı anda oluşturuyoruz
 
