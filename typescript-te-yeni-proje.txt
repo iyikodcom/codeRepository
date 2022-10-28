@@ -1,3 +1,14 @@
+- proje klasörünü oluşturuyoruz
+- terminalden proje klasörüne geliyoruz
+- git init ile repomuzu oluşturuyoruz
+- npm init -y ile package.json dosyasını oluşturuyoruz ve gerekli bilgileri otomatik olarak dolduruluyor, istersek bu bilgileri daha sonrasında değiştirebiliriz
+- tsc --init ile tsconfig.json dosyasını oluşturuyoruz içi dolu
+- tsconfig.json dosyasındaki "outDir": "./dist", "rootDir": "./src" alanları bu şekilde güncelliyoruz
+- kök dizin seviyesinde index.html dosyasını oluşturuyoruz ve "./dist/bundle.js" dosyasını ekliyoruz
+-
+
+
+
 # npm init
 Komutu çalıştırdığımızda bize bazı soralar soracaktır, bu sorular package.json dosyası içindir, boş bırakıp enter tuşuna basarak soruları geçebilrisiniz.
 
@@ -5,8 +16,3 @@ Komutu çalıştırdığımızda bize bazı soralar soracaktır, bu sorular pack
 Browserify özetle şu işe yarar; uygulamamız içerisinde oluşturduğumuz tüm Javascript dosyalarını (modül, request, require …) tek bir paket (bundle) haline getirir. 
 Biz en basit haliyle kullanacağız, detaylı bilgi için browserify.org adresine bakabilirsiniz.
 npm install browserify
-
-# npm Watchify (tavsiye edilir)
-Projemizde yapılan her değişiklikten sonra Browserify için komut satırından derleme komutunu çalıştırmamız gerekir. Watchify bu işi bizim için 
-otomatik olarak yapacaktır.
-npm i watchify
