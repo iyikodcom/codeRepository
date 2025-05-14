@@ -20,3 +20,4 @@ Projelerimde kullanmış olduğum herzaman ve heryerde gerekli olan kodlarım
 * [Typescript'te yeni proje](https://github.com/iyikodcom/codeRepository)
 * [Bootstrap v5.3 - Açık ve Koyu Mod Örneği](https://github.com/iyikodcom/codeRepository/blob/master/bootstrap-v5.3-light-and-dark-mode-example.html)
 * [Veritabanındaki bir talodaki tüm verileri tek bir hücrede JSON formatında çıktı vermesini sağlar](https://raw.githubusercontent.com/iyikodcom/codeRepository/master/DB-to-JSON.sql)
+* [Branch içinde değişen dosyalar listesi ve dosyaların kopyasının oluşturulması](https://github.com/iyikodcom/codeRepository/blob/master/branch-icinde-degisen-dosyalar-listesi.txt)
