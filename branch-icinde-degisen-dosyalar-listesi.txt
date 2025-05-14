@@ -1,0 +1,44 @@
+# Window Ortamı için;
+
+1. PowerShell'i Aç, önce PowerShell penceresini aç (örneğin: Başlat > PowerShell yaz > sağ tıkla > "Yönetici olarak çalıştır").
+2. Proje Dizinine Geç
+3. Kodu Çalıştır, aşağıdaki tüm kodları PowerShell’e bir seferde çalıştırabilirsin.
+
+============================================
+Kod -- Bşlangıç
+============================================
+
+# Geçerli branch adını al
+$branch = git rev-parse --abbrev-ref HEAD
+
+# Klasörleri oluştur (-Force varsa hata vermez)
+mkdir "changed-files" -Force
+mkdir "changed-files\files" -Force
+
+# Değişen dosyaların listesini al ve kaydet
+git diff --name-only origin/master..$branch > "changed-files\list.txt"
+Write-Host "Değişiklik listesi oluşturuldu: changed-files\list.txt"
+
+# Her dosya için ilgili klasörü oluştur ve dosyayı kopyala
+Get-Content "changed-files\list.txt" | ForEach-Object {
+    $source = $_
+    $destinationFolder = Join-Path "changed-files\files" (Split-Path $source -Parent)
+    
+    # Hedef klasör yoksa oluştur
+    if (-not (Test-Path $destinationFolder)) {
+        mkdir $destinationFolder -Force
+    }
+
+    # Dosyayı kopyala (dosya varsa üzerine yazılmaz)
+    if (Test-Path $source) {
+        Copy-Item $source -Destination $destinationFolder -Force
+    } else {
+        Write-Host "Uyarı: Dosya bulunamadı -> $source"
+    }
+}
+
+Write-Host "Tüm dosyalar 'changed-files\files' klasörüne kopyalandı."
+
+============================================
+Kod -- Son
+============================================
