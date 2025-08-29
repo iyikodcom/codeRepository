@@ -8,8 +8,28 @@ Düzenleme: Bu dosyayı açın ve her site için aşağıdaki şablonda bir böl
 yollarını kendi projenize göre değiştirin. DocumentRoot, sitenizin ana klasörünü, ServerName ise kullanacağınız 
 yerel alan adını belirtir.
 
+Önemli: Apache’de VirtualHost sıralaması kritik öneme sahiptir. Apache, gelen HTTP isteğini hangi 
+VirtualHost’un karşılayacağını belirlerken ilk eşleşen bloğu kullanır. Bu nedenle: Önce localhost bloğu tanımlanmalıdır. 
+Böylece http://localhost/ istekleri her zaman doğru kök dizine yönlendirilir ve diğer sanal domainler ile çakışmaz.
+Sonra diğer sanal domainler (anasite.local, statik.anasite.local vb.) tanımlanmalıdır. Bu sayede her domain kendi alt dizin 
+veya proje klasörüne doğru şekilde yönlendirilir. Eğer sıralama ters olursa, örneğin sanal domain bloğu önce gelirse, 
+http://localhost/ isteği otomatik olarak ilk sanal domainin DocumentRoot’una düşer ve localhost erişimi engellenir.Bu nedenle, 
+VirtualHost bloklarını planlarken öncelik ve sıralamayı doğru ayarlamak, hem localhost hem de sanal 
+domainlerin sorunsuz çalışmasını sağlar.
+
 =====================================================================
 =====================================================================
+# Default localhost (ana kök dizin)
+<VirtualHost *:80>
+    ServerName localhost
+    DocumentRoot "C:/xampp/htdocs"
+    <Directory "C:/xampp/htdocs">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
 <VirtualHost *:80>
     ServerName anasite.local
     DocumentRoot "C:/xampp/htdocs/projelerim/anasite"
