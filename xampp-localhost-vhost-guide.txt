@@ -1,0 +1,52 @@
+1. Sanal Hostları Yapılandırma (httpd-vhosts.conf)
+
+Bu adım, XAMPP'in farklı alan adları için farklı klasörlerden içerik sunmasını sağlar.
+
+Dosya Konumu: C:\xampp\apache\conf\extra\httpd-vhosts.conf
+
+Düzenleme: Bu dosyayı açın ve her site için aşağıdaki şablonda bir bölüm ekleyin. siteadi.local ve klasör 
+yollarını kendi projenize göre değiştirin. DocumentRoot, sitenizin ana klasörünü, ServerName ise kullanacağınız 
+yerel alan adını belirtir.
+
+=====================================================================
+=====================================================================
+<VirtualHost *:80>
+    ServerName anasite.local
+    DocumentRoot "C:/xampp/htdocs/projelerim/anasite"
+    <Directory "C:/xampp/htdocs/projelerim/anasite">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName statik.anasite.local
+    DocumentRoot "C:/xampp/htdocs/projelerim/anasite/statik-kaynaklar"
+    <Directory "C:/xampp/htdocs/projelerim/anasite/statik-kaynaklar">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+=====================================================================
+=====================================================================
+
+2. hosts Dosyasını Düzenleme
+
+Windows işletim sisteminde sanal domainlerin çalışabilmesi için hosts dosyası düzenlenmelidir.
+
+Dosya Konumu: C:\Windows\System32\drivers\etc\hosts
+
+Düzenleme: Komut İstemi'ni (CMD) yönetici olarak çalıştırın ve "notepad C:\Windows\System32\drivers\etc\hosts" komutunu yazıp Enter'a basın. 
+Açılan dosyada her bir sanal host için aşağıdaki satırları dosyanın en alt kısmına ekleyin:
+
+127.0.0.1    anasite.local
+127.0.0.1    statik.anasite.local
+
+3. XAMPP'i Yeniden Başlatma
+
+Apache'nin yeni ayarları okuması için XAMPP kontrol panelinden Apache sunucusunu durdurup yeniden başlatın.
+
+Bu adımları tamamladıktan sonra, tarayıcınıza http://anasite.local veya http://statik.anasite.local gibi belirlediğiniz alan 
+adlarını yazarak projenize erişebilirsiniz.
