@@ -1,0 +1,27 @@
+1. Genel Mantık
+
+php -S → PHP’nin kendi içinde gelen küçük web sunucusunu başlatır.
+0.0.0.0:PORT → Hangi IP ve port üzerinden çalışacağını belirtir. 0.0.0.0 demek “herkese açık” (tüm IP adreslerinden erişilebilir) anlamına gelir.
+-t C:/xampp/htdocs/... → Web sunucusunun kök klasörünü (document root) belirtir.
+
+2. Komutların Açıklaması
+
+Start-Job { php -S 0.0.0.0:8081 -t C:/xampp/htdocs/sub1 } (PowerShell)
+
+Start-Job { ... } → Komutu arka planda (background job) çalıştırır. Böylece terminalin kilitlenmez.
+php -S 0.0.0.0:8081 → PHP dahili sunucu 8081 portunda çalışacak.
+-t C:/xampp/htdocs/sub1 → Web kök dizini sub1 klasörü olacak.
+
+Yani http://localhost:8081 adresine gidersen C:/xampp/htdocs/sub1 içeriğini görürsün.
+
+3. Hepsini Durdurmak
+
+Arka planda çalışan işleri görmek için: Get-Job (PowerShell)
+
+Tüm işleri durdurmak için: Get-Job | Stop-Job (PowerShell)
+
+4. Kısaca Kullanım Senaryosu
+
+Birden fazla küçük web projesini aynı anda çalıştırmak için çok pratik.
+localhost:8081, localhost:8082, localhost:8083 üzerinden farklı klasörlere erişebilirsin.
+Tek komutla başlatıp tek komutla kapatabiliyorsun.
