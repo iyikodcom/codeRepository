@@ -3,6 +3,8 @@
 1. PowerShell'i Aç, önce PowerShell penceresini aç (örneğin: Başlat > PowerShell yaz > sağ tıkla > "Yönetici olarak çalıştır").
 2. Proje Dizinine Geç
 3. Kodu Çalıştır, aşağıdaki tüm kodları PowerShell’e bir seferde çalıştırabilirsin.
+4.git diff --name-only origin/master..$branch > "changed-files\list.txt" bu satırdaki "master" ana branch'ini kendi ana branch'inin
+ismi ne ise onunla değiştir, örnek olarak "main" yap
 
 ============================================
 Kod -- Bşlangıç
