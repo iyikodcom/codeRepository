@@ -4,7 +4,7 @@ Projelerimde kullanmış olduğum herzaman ve heryerde gerekli olan kodlarım
 * [Basit SQL Sorguları](https://github.com/iyikodcom/codeRepository/blob/master/sql-crud-examples.md)
 * [Sınırsız Kategori](https://github.com/iyikodcom/codeRepository/blob/master/infiniteCategory.php)
 * [PHP implode() ve explode() Örnekleri](https://github.com/iyikodcom/codeRepository/blob/master/php-implode-explode.md)
-* [Git ve Github Komutları](https://github.com/iyikodcom/codeRepository/blob/master/gitAndGithubCommands.txt)
+* [Git ve Github Komutları](https://github.com/iyikodcom/codeRepository/blob/master/git-basics.md)
 * [Pyton Ders Notları](https://github.com/iyikodcom/codeRepository/blob/master/pythonLectureNotes.txt)
 * [Php ile Mongodb bağlantısı](https://github.com/iyikodcom/codeRepository/blob/master/phpConnectionMongoDb)
 * [Php ile Mongodb kodları](https://github.com/iyikodcom/codeRepository/blob/master/phpWithMongodbCodes.txt)
