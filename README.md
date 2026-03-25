@@ -2,7 +2,7 @@
 Projelerimde kullanmış olduğum herzaman ve heryerde gerekli olan kodlarım
 * [PDO Örnekleri](https://github.com/iyikodcom/codeRepository/blob/master/pdo-examples.md)
 * [Basit SQL Sorguları](https://github.com/iyikodcom/codeRepository/blob/master/sql-crud-examples.md)
-* [Sınırsız Kategori](https://github.com/iyikodcom/codeRepository/blob/master/infiniteCategory.php)
+* [Sınırsız Kategori](https://github.com/iyikodcom/codeRepository/blob/master/category-tree-example.md)
 * [PHP implode() ve explode() Örnekleri](https://github.com/iyikodcom/codeRepository/blob/master/php-implode-explode.md)
 * [Git ve Github Komutları](https://github.com/iyikodcom/codeRepository/blob/master/git-basics.md)
 * [Pyton Ders Notları](https://github.com/iyikodcom/codeRepository/blob/master/pythonLectureNotes.txt)
