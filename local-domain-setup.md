@@ -1,8 +1,6 @@
 # 🌐 Local Domain (.test) Kurulumu – XAMPP (Manuel)
 Bu doküman, XAMPP kullanarak PHP projelerinde `.test` uzantılı local domainler oluşturmayı adım adım açıklar.
 
-------------
-
 ## 📌 Amaç
 Local projelere aşağıdaki gibi erişmek:
 ```
@@ -10,14 +8,10 @@ http://proje1.test
 http://api.proje1.test
 ```
 
-------------
-
 ## 🧱 Gereksinimler
 - XAMPP (Apache çalışıyor olmalı)
 - Windows işletim sistemi
 - Yönetici (Administrator) yetkisi
-
-------------
 
 ## 1️⃣ Hosts Dosyasını Düzenleme
 
@@ -31,8 +25,6 @@ Windows, domainleri IP adresine çevirmek için `hosts` dosyasını kullanır.
 127.0.0.1 api.proje1.test
 127.0.0.1 admin.proje1.test
 ```
-
-------------
 
 ## 2️⃣ Apache VirtualHost Ayarı
 
@@ -62,25 +54,19 @@ Apache’ye gelen domain isteğini ilgili klasöre yönlendirmek için VirtualHo
 </VirtualHost>
 ```
 
-------------
-
-##3️⃣ VirtualHost Dosyasını Aktif Etme
+## 3️⃣ VirtualHost Dosyasını Aktif Etme
 📍 Dosya: **C:\xampp\apache\conf\httpd.conf**
 Aşağıdaki satır aktif olmalıdır:
 `Include conf/extra/httpd-vhosts.conf` 📌 Eğer başında `#` varsa kaldır.
 
-------------
-
-##4️⃣ Apache Yeniden Başlatma
+## 4️⃣ Apache Yeniden Başlatma
 ```
 XAMPP Control Panel aç
 Apache → Stop
 Apache → Start
 ```
 
-------------
-
-##5️⃣ Test Etme
+## 5️⃣ Test Etme
 Tarayıcıdan kontrol et:
 ```
 http://proje1.test
