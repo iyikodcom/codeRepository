@@ -23,3 +23,4 @@ Projelerimde kullanmış olduğum herzaman ve heryerde gerekli olan kodlarım
 * [PowerShell ile Aynı Anda Birden Fazla PHP Sunucusu Çalıştırma Rehberi](https://github.com/iyikodcom/codeRepository/blob/master/powershell-ile-ayni-anda-birden-fazla-php-sunucusu-calistirma-rehberi.txt)
 * [Google Colab’da Apache + PHP + MySQL Ortamı Kurma](https://github.com/iyikodcom/codeRepository/blob/master/google-colab-apache-php-mysql-ortami-kurma.txt)
 * [Local Domain (.test) Kurulumu – XAMPP (Manuel)](https://github.com/iyikodcom/codeRepository/blob/master/local-domain-setup.md)
+* [OpenShot Dikey Videoyu Yatay Formata Çevirme (Blur Arka Plan)](https://github.com/iyikodcom/codeRepository/blob/master/openshot-blur-background.md)
