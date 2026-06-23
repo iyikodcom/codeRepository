@@ -24,4 +24,4 @@ Projelerimde kullanmış olduğum herzaman ve heryerde gerekli olan kodlarım
 * [Google Colab’da Apache + PHP + MySQL Ortamı Kurma](https://github.com/iyikodcom/codeRepository/blob/master/google-colab-apache-php-mysql-ortami-kurma.txt)
 * [Local Domain (.test) Kurulumu – XAMPP (Manuel)](https://github.com/iyikodcom/codeRepository/blob/master/local-domain-setup.md)
 * [OpenShot Dikey Videoyu Yatay Formata Çevirme (Blur Arka Plan)](https://github.com/iyikodcom/codeRepository/blob/master/openshot-blur-background.md)
-* [Diablo2 LoD Modern Kurulum Rehberi](https://github.com/iyikodcom/codeRepository/blob/master/openshot-blur-background.md)
+* [Diablo2 LoD Modern Kurulum Rehberi](https://github.com/iyikodcom/codeRepository/blob/master/diablo-2-v113c-modernization-guide.md)
